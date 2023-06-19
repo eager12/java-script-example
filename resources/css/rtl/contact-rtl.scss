@@ -1,0 +1,251 @@
+@use "resources/css/master" as m;
+
+.contactHeader {
+  width: 100%;
+  height: 555px;
+  background-image: url('/images/contactimg2.jpg');
+  background-position: center;
+  background-size: cover;
+}
+
+.contactPageContainer {
+  background-color: #b5b5b5;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 40px !important;
+  //padding-bottom: 70px !important;
+
+  & > div {
+    width: 100%;
+    //@include m.limitWidth;
+  }
+}
+
+.contactPageTitleContainer {
+  @include m.limitWidth;
+}
+
+.contactPageTitle {
+  height: 116px;
+  padding: 0 !important;
+  margin-bottom: 40px;
+  width: 100%;
+  @include m.limitWidth;
+
+  & > h3 {
+    left: 0;
+    color: #fff;
+  }
+
+  & > p {
+    left: 5px;
+  }
+}
+
+.contactFormContainer {
+  //background-color: rgba(2, 2, 2, .4);
+  @include m.limitWidth;
+  @media(max-width: 1580px) {
+    padding: 0 65px !important;
+  }
+  @media(max-width: m.$responsiveSize) {
+    flex-direction: column-reverse;
+    padding: 0 24px !important;
+
+  }
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+
+}
+
+.contactFormForm {
+  width: 66%;
+  padding: 0 15px 0px 0;
+  @media(max-width: m.$responsiveSize) {
+    width: 100%;
+    padding: 0;
+  }
+
+
+  & > form {
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+
+    & > input {
+      height: 44px;
+      padding: 6px 15px;
+      margin-bottom: 20px;
+      border: 1px solid #9A784B !important;
+      outline: none !important;
+      font-family: yekanL;
+
+    }
+
+    & > textarea {
+      border: 1px solid #9A784B !important;
+      outline: none !important;
+      padding: 15px;
+      margin-bottom: 20px;
+      height: 170px;
+      font-family: yekanL;
+
+
+    }
+
+    & > #submit {
+      height: 44px;
+      background-color: #2d2d2d;
+      border: none !important;
+      color: #fff;
+      font-family: yekanL;
+
+    }
+  }
+}
+
+.contactEmailContainer {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  width: 34%;
+  padding: 0 67px 0 15px;
+  margin-top: 0px;
+  @media(max-width: m.$responsiveSize) {
+    width: 100%;
+    padding: 0 0 20px;
+
+  }
+
+
+  & > .contactTitleText {
+    margin-bottom: 76px;
+    font-size: 30px;
+    font-family: yekanL;
+    @media(max-width: 1436px) {
+      margin-bottom: 59px;
+    }
+    @media(max-width: m.$responsiveSize) {
+      margin-bottom: 40px;
+    }
+  }
+
+  & > .emailGrandContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    & > div {
+      & > img {
+        width: 40px;
+      }
+
+      &:nth-child(2) {
+        margin-left: 15px;
+
+        & > p {
+          font-family: yekanL;
+          font-size: 13px;
+        }
+
+        & > a {
+          font-family: yekanL;
+          font-size: 13px;
+          text-decoration: none;
+          color: #000;
+          margin-top: 10px;
+          display: block;
+        }
+      }
+    }
+  }
+}
+
+
+.contactPageIntroContainer {
+  width: 100%;
+  height: 907px;
+  background-color: #9A784B;
+  //background-image: url('/images/contactimg2.jpg');
+  //background-image: url('/images/about/aboutBg2.jpg');
+
+  background-size: contain;
+  background-position: top center;
+  background-repeat: no-repeat;
+  padding-top: 271px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  @media(max-width: 1580px) {
+    padding-top: 170px;
+  }
+  @media(max-width: m.$responsiveSize) {
+    padding-top: 150px;
+    height:100%;
+    padding-bottom: 24px;
+
+  }
+}
+
+.contactPageIntro {
+  @include m.limitWidth;
+  height: 527px;
+  @media(max-width: m.$responsiveSize) {
+    height: 100%;
+  }
+  & > div {
+    width: 100%;
+    //max-width: 1100px;
+    padding: 82px 0;
+    margin: 0 auto;
+    background-color: #fff;
+    height: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    @media(max-width: m.$responsiveSize) {
+      padding: 24px 0;
+      height: auto;
+
+    }
+
+  }
+}
+
+.contactConItems {
+  margin-bottom: 20px;
+  width: 100%;
+
+  & h4 {
+    color: #000;
+    font-family: yekanL;
+    margin-bottom: 10px;
+    font-size: 18px;
+  }
+
+  & p, & a {
+    color: #777777;
+    font-family: yekanL;
+    display: block;
+    text-decoration: none;
+    margin-bottom: 5px;
+    font-size: 12px;
+    line-height: 18px;
+
+  }
+
+  & a {
+    margin-bottom: 0;
+    direction: ltr;
+    text-align: right;
+
+  }
+
+}

@@ -1,0 +1,19 @@
+$responsiveSize : 900px;
+@mixin limitWidth {
+  width: 100%;
+  max-width: 1440px;
+  padding: 0 40px;
+  @media(max-width:1580px){
+    max-width: 100%;
+    padding: 0 100px;
+  }
+  @media(max-width: $responsiveSize){
+    padding: 0 24px;
+  }
+}
+.bodyContainer{
+  width:100%;
+  max-width: 1440px;
+  margin:0 auto;
+  padding: 0 40px;
+}

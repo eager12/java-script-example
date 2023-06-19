@@ -1,0 +1,137 @@
+@use "master" as m;
+
+.aboutPageIntroContainer {
+  width: 100%;
+  height: 907px;
+  background-color: #9A784B;
+  //background-image: url('/images/about/aboutBg2.jpg');
+  background-size: contain;
+  background-position: top center;
+  background-repeat: no-repeat;
+  padding-top: 271px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  @media(max-width: 1580px) {
+    padding-top: 170px;
+  }
+  @media(max-width: m.$responsiveSize) {
+    padding-top: 139px;
+    height: 100%;
+  }
+}
+
+.aboutPageIntro {
+  @include m.limitWidth;
+  height: 569px;
+  @media(max-width: m.$responsiveSize) {
+    height: 100%;
+    padding-bottom: 24px;
+  }
+
+  & > div {
+    width: 100%;
+    //max-width: 1100px;
+    margin: 0 auto;
+    background-color: #fff;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    @media (max-width: m.$responsiveSize) {
+      flex-direction: column;
+      height: auto;
+      img {
+        width: 100%;
+      }
+    }
+  }
+}
+
+.aboutPageIntroText {
+  padding: 60px 0 60px 60px;
+
+  & > p {
+    font-family: 'Droid Serif', 'oswaldL';
+    color: #707070;
+    margin-bottom: 13px;
+    text-align: justify;
+    @media (max-width: 1300px) {
+      font-size: 15px;
+
+    }
+    @media (max-width: 1200px) {
+      font-size: 13px;
+    }
+
+    &:last-child {
+      margin-bottom: 0px;
+
+    }
+  }
+
+  @media (max-width: m.$responsiveSize) {
+    padding: 24px;
+  }
+}
+
+.aboutActivityFieldsContainer {
+  width: 100%;
+  padding: 70px 0;
+  background-color: #001111;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.aboutActivityFields {
+  background-color:#131c44;
+  padding-top:30px !important;
+  padding-bottom: 30px !important;
+  & .aboutPageFieldsTitle {
+    @include m.limitWidth;
+    margin:0 auto;
+    & > h2 {
+      font-family: yekanR;
+      font-size: 28px;
+      color: #fff;
+      border-bottom: 1px solid #fff;
+      padding-bottom: 10px;
+      margin-bottom: 70px;
+      @media (max-width: m.$responsiveSize) {
+        margin-bottom: 40px;
+      }
+    }
+  }
+}
+
+.aboutPageFieldsGrid {
+  //max-width: 1360px;
+  display: grid;
+  grid-template-columns: 665px 665px;
+  column-gap: 38px;
+  row-gap: 38px;
+  margin:0 auto;
+  @include m.limitWidth;
+
+  & img {
+    width: 100%;
+  }
+
+  @media (max-width: 1580px) {
+    //max-width: 1240px;
+    display: grid;
+    grid-template-columns: calc(50% - 15px) calc(50% - 15px);
+    column-gap: 30px;
+    row-gap: 30px;
+
+  }
+  @media (max-width: m.$responsiveSize) {
+    max-width: 100%;
+    display: grid;
+    grid-template-columns: 100%;
+    row-gap: 20px;
+
+  }
+}

@@ -1,0 +1,151 @@
+@use "master" as m;
+
+.eventsHeader {
+  width: 100%;
+  height: 555px;
+  //background-image: url('/images/eventBgNew.jpg');
+  background-position: center;
+  background-size: cover;
+}
+
+.eventsPageContainer {
+  background-color: #fff;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 40px !important;
+  padding-bottom: 70px !important;
+
+  & > div {
+    @include m.limitWidth;
+  }
+}
+
+.eventPageTitle {
+  height: 116px;
+  padding: 0 !important;
+  margin-bottom: 40px;
+  @media (max-width: m.$responsiveSize){
+    height: 80px;
+
+  }
+
+  & > h3 {
+    left: 0;
+  }
+
+  & > p {
+    left: 5px;
+  }
+}
+
+.eventPageItemsContainer {
+  display: grid;
+  grid-template-columns: calc((100% - 40px) / 3) calc((100% - 40px) / 3) calc((100% - 40px) / 3);
+  grid-column-gap: 20px;
+  grid-row-gap: 50px;
+  @media (max-width: m.$responsiveSize){
+    grid-template-columns: 100%;
+    grid-row-gap: 40px;
+
+  }
+
+  & > a {
+    text-decoration: none;
+
+    & > .eventPageItem {
+      width: 100%;
+
+      & > .eventPageItemImage {
+        width: 100%;
+
+        & > img {
+          width: 100%;
+          margin-bottom: 18px;
+        }
+      }
+
+      & > .eventPageItemData {
+        & > p {
+          font-size: 18px;
+          font-family: oswaldL;
+          color: #595959;
+          line-height: 26px;
+          text-align: left;
+        }
+      }
+    }
+  }
+}
+
+//single event page
+.singleEventPageContainer {
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  padding: 50px 60px;
+  @media (max-width: m.$responsiveSize){
+    padding: 30px 24px;
+
+
+  }
+  & > h1 {
+    font-size: 36px;
+    color: #14334c;
+    font-family: OswaldL;
+  }
+
+  & > p {
+    margin-top: 5px;
+    color: #4187c7;
+    font-size: 14px;
+    margin-bottom: 36px;
+    font-family: robotoL;
+  }
+
+  & > img {
+    max-width: 880px;
+    width: 100%;
+    margin-bottom: 24px;
+  }
+
+  & > .eventBody {
+    max-width: 880px;
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    color: #14334c;
+    line-height: 1.34;
+    font-size: 14px;
+    font-family: robotoL;
+
+    & p, & li, & a {
+      color: #14334c;
+      line-height: 25px;
+      font-size: 14px;
+      margin-bottom: 10px;
+      font-family: robotoL;
+
+    }
+
+    & img {
+      width: 100% !important;
+      height: auto !important;
+    }
+
+    & strong {
+      font-weight: 400;
+    }
+
+    & a {
+      color: #14334c;
+      text-decoration: underline;
+    }
+  }
+
+}

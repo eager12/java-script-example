@@ -1,0 +1,21 @@
+{
+    "/js/app.js": "/js/app.js",
+    "/css/about.css": "/css/about.css",
+    "/css/homepage.css": "/css/homepage.css",
+    "/css/footer.css": "/css/footer.css",
+    "/css/header.css": "/css/header.css",
+    "/css/master.css": "/css/master.css",
+    "/css/rtl/events-rtl.css": "/css/rtl/events-rtl.css",
+    "/css/rtl/contact-rtl.css": "/css/rtl/contact-rtl.css",
+    "/css/rtl/products-rtl.css": "/css/rtl/products-rtl.css",
+    "/css/rtl/about-rtl.css": "/css/rtl/about-rtl.css",
+    "/css/rtl/homepage-rtl.css": "/css/rtl/homepage-rtl.css",
+    "/css/rtl/footer-rtl.css": "/css/rtl/footer-rtl.css",
+    "/css/rtl/header-rtl.css": "/css/rtl/header-rtl.css",
+    "/css/rtl/master-rtl.css": "/css/rtl/master-rtl.css",
+    "/css/events.css": "/css/events.css",
+    "/css/contact.css": "/css/contact.css",
+    "/css/products.css": "/css/products.css",
+    "/css/build/all.css": "/css/build/all.css",
+    "/css/build/all-rtl.css": "/css/build/all-rtl.css"
+}

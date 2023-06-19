@@ -1,0 +1,453 @@
+@use "master" as m;
+
+body {
+  //background-image: url('/images/introBg.jpg');
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.intro {
+
+  width: 100%;
+  height: 1000px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @media (max-width: m.$responsiveSize) {
+    height: 650px;
+  }
+  & > img {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 2;
+  }
+}
+
+.introContent {
+  @include m.limitWidth;
+  height: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding-top: 140px !important;
+  flex-direction: column;
+  z-index: 3;
+
+  & > p {
+    font-size: 22px;
+    font-family: oswaldR;
+    color: #001111;
+    @media (max-width: m.$responsiveSize) {
+      font-size: 18px;
+    }
+  }
+
+  & > h2 {
+    font-size: 66px;
+    font-family: oswaldB;
+    line-height: 66px;
+    margin-bottom: 5px;
+    color: #F5EEEE;
+    @media (max-width: m.$responsiveSize) {
+      font-size: 60px;
+    }
+
+  }
+}
+
+.portfolioBtn {
+  width: 112px;
+  height: 43px;
+  cursor: pointer;
+  background: #fff;
+  color: #001111;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: oswaldB;
+}
+
+.homepageDivider {
+  width: 100%;
+  height: 17px;
+  background-color: #111111;
+}
+
+.homepageRecentWorksContainer {
+  background-image: url('/images/recentWorksPattern.svg');
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  padding: 22px 0;
+}
+
+.recentWorks {
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  padding: 33px 0 65px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  & > h3 {
+    font-family: robotoL;
+    font-size: 30px;
+    @media (max-width: m.$responsiveSize) {
+      font-size: 26px;
+    }
+
+  }
+}
+
+.recentWorkItemsContainer {
+  @include m.limitWidth;
+  margin: 30px 0 0 0;
+  display: grid;
+  grid-template-columns: 440px 440px 440px;
+  column-gap: 20px;
+  @media(max-width: 1580px) {
+    grid-template-columns: calc(33% - 10px) calc(33% - 10px) calc(33% - 10px);
+  }
+  @media(max-width: m.$responsiveSize) {
+    grid-template-columns: 100%;
+  }
+
+  & > div {
+    @media(max-width: m.$responsiveSize) {
+      margin-bottom: 10px;
+      text-align: center;
+    }
+    & > a {
+      width: 100%;
+
+      & > img {
+        width: 100%;
+        max-width: 440px;
+      }
+    }
+  }
+}
+
+.selfInterviewSection {
+  background-image: url('/images/selfInterviewPattern.svg');
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  padding: 180px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  @media (max-width: m.$responsiveSize) {
+    padding: 90px 0;
+  }
+
+  & > h1 {
+    font-family: 'Droid Serif';
+    font-size: 52px;
+    color: #F5EEEE;
+    text-align: center;
+    @media (max-width: m.$responsiveSize) {
+      font-size: 23px;
+    }
+
+    &:before, &:after {
+      width: calc(100%);
+      background-color: #F5EEEE;
+      height: 1px;
+      content: '';
+      display: block;
+    }
+
+    &:before {
+      margin-bottom: 19px;
+    }
+
+    &:after {
+      margin-top: 19px;
+    }
+  }
+}
+
+.canvasSection {
+  padding-top: 25px;
+  padding-bottom: 152px;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  @media (max-width: 1580px) {
+    padding-bottom: 52px;
+
+  }
+}
+
+.canvasTitle {
+  @include m.limitWidth;
+  position: relative;
+  margin-bottom: 50px;
+
+
+  & > h3 {
+    font-size: 66px;
+    color: rgba(193, 193, 193, 0.4);
+    font-family: oswaldB;
+    position: absolute;
+    z-index: 2;
+    letter-spacing: 25px;
+    text-transform: uppercase;
+    left: 40px;
+    top: -5px;
+    @media (max-width: 1580px) {
+      left: 100px;
+      font-size: 62px;
+    }
+    @media (max-width: m.$responsiveSize) {
+      left: 24px;
+      font-size: 50px;
+      letter-spacing: 20px;
+
+    }
+  }
+
+  & > p {
+    color: #001111;
+    font-size: 22px;
+    font-family: oswaldL;
+    z-index: 4;
+    position: absolute;
+    letter-spacing: 10px;
+    left: 45px;
+    @media (max-width: 1580px) {
+      left: 105px;
+      font-size: 18px;
+    }
+    @media (max-width: m.$responsiveSize) {
+      left: 34px;
+    }
+
+    &:nth-child(2) {
+      top: 55px;
+      @media (max-width: m.$responsiveSize) {
+        top: 42px;
+      }
+    }
+
+    &:nth-child(3) {
+      font-size: 15px;
+      top: 85px;
+      @media (max-width: m.$responsiveSize) {
+        font-size: 13px;
+        top: 70px;
+
+      }
+    }
+  }
+}
+
+.canvasItemsContainer {
+  @include m.limitWidth;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: 90px -10px 0 -10px;
+  width: calc(100% + 20px) !important;
+  max-width: 1450px !important;
+  @media(max-width: 1580px) {
+    max-width: calc(100% - 20px) !important;
+    margin: 90px 0 0 0 !important;
+    padding: 0 80px !important;
+  }
+  @media(max-width: m.$responsiveSize) {
+    margin: 80px 0 0 0 !important;
+    padding: 0 4px !important;
+
+  }
+
+  & > div {
+    padding: 10px;
+    width: 33.33333%;
+    min-height: max-content;
+    height: max-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @media(max-width: m.$responsiveSize) {
+      padding: 4px;
+      min-height: unset;
+      height: unset;
+    }
+    &:nth-child(10n+5) {
+      width: 66.66666%;
+
+    }
+
+    &:nth-child(10n+9) {
+      width: 66.66666%;
+    }
+
+    &:nth-child(10n+4), &:nth-child(10n+5), &:nth-child(10n+9), &:nth-child(10n+10), {
+      min-height: max-content;
+
+    }
+
+
+    & > img {
+      width: 100%;
+      //height: 100%;
+      min-height: 100%;
+      //object-fit: cover;
+      //background-color: indianred;
+      @media(max-width: m.$responsiveSize) {
+        min-height: unset;
+        height: unset;
+      }
+    }
+  }
+}
+
+.blogSection {
+  background-image: url('/images/homeBlogPattern.svg');
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  padding: 32px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.homeBlogItemsContainer {
+  @include m.limitWidth;
+
+  & > a {
+    width: 100%;
+    height: 122px;
+    background-color: #ffffff;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 10px;
+    text-decoration: none;
+    @media (max-width: m.$responsiveSize) {
+      height: 150px;
+    }
+
+    & i {
+      color: #111;
+    }
+
+    & > h3 {
+      font-size: 25px;
+      font-family: 'Droid Serif' ,"oswaldL";
+      color: #111;
+      @media (max-width: m.$responsiveSize) {
+        font-size: 20px;
+        text-align: center;
+      }
+    }
+
+    cursor: pointer;
+
+    &:hover {
+      background-color: #111;
+
+      & h3, & p, & i {
+        color: #fff;
+      }
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  & > div {
+    height: 174px;
+    padding: 0px;
+    cursor: auto;
+    width: 100%;
+    background-color: #ffffff;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    &:hover {
+      background-color: #fff;
+
+      & h3, & p, & i {
+        color: #111;
+      }
+    }
+
+    & > h2 {
+      font-family: OswaldL;
+      font-size: 29px;
+      color: #111;
+      margin: 20px 0;
+      padding-bottom: 20px;
+      border-bottom: 1px solid #000;
+      @media (max-width: m.$responsiveSize) {
+        margin-top: 0;
+        font-size: 25px;
+      }
+    }
+
+    & > a {
+      text-decoration: none;
+      color: #777;
+      font-size: 15px;
+      font-family: ubuntuL;
+      @media (max-width: m.$responsiveSize) {
+        font-size: 13px;
+      }
+    }
+  }
+}
+
+.eventInfo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 400px;
+  margin-top: 26px;
+  @media (max-width: m.$responsiveSize) {
+    flex-direction: column;
+    width: auto;
+    margin-top: 20px;
+  }
+
+  & > div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @media (max-width: m.$responsiveSize) {
+      margin-bottom: 10px;
+    }
+
+    & > p {
+      font-size: 15px;
+      font-family: ubuntuL;
+      color: #777;
+      margin-left: 10px;
+      text-transform: uppercase;
+      @media (max-width: m.$responsiveSize) {
+        font-size: 13px;
+      }
+    }
+  }
+}
